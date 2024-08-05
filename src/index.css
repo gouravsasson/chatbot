@@ -1,0 +1,20 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Maison Neue Light';
+    src: url('./assets/fonts/fonts/fonnts.com-Maison_Neue_Light.ttf');
+}
+
+@font-face {
+    font-family: 'Maison Neue Bold';
+    src: url('./assets/fonts/fonts/fonnts.com-Maison_Neue_Bold.ttf');
+}
+
+
+ 
