@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AboutUs from './AboutUs';
 import OurServices from './OurServices';
+import Benifits from './Benifits';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -30,7 +31,7 @@ const StickySections = () => {
     gsap.to(sectionRef2.current, {
       scrollTrigger: {
         trigger: sectionRef2.current,
-        start: "top top",
+        start: "bottom 75%",
         end: "bottom+=500 top",
         pin: true,
         pinSpacing: false,
@@ -77,11 +78,12 @@ const StickySections = () => {
         <OurServices/>
       </div>
       <div
-        className="relative flex flex-col items-center justify-center h-screen  bg-gray-300"
+        className="relative pt-10 h-screen    bg-gray-300"
         ref={sectionRef3}
       >
-        <h1 className="text-4xl font-bold">Sticky Section 3</h1>
-        
+        <div className=' '>
+        <Benifits/> 
+        </div>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import gsap from "gsap";
-import img from "../assets/img/img1.png";
+import img from "../assets/img/bgimg.png";
 
 function HeroSection() {
   const text = useRef(null);
@@ -28,30 +28,35 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="w-full flex items-center">
-      <div ref={text} className="flex flex-col basis-[70%]">
-        <div>
-          <p className="font-Lexend text-[100px] text-white font-bold m-0 p-0 leading-none">
-            Build
-          </p>
-          <h1 className="font-Lexend text-[100px] text-white font-bold m-0 p-0 leading-none">
-            Yours next-gen
-          </h1>
-        </div>
-
-        <div>
-          <span
-            ref={us}
-            className="font-Lexend font-semibold text-[#9086EF] text-[100px] m-0 p-0 leading-none"
-          ></span>
-        </div>
-        <p className="font-Lexend text-lg text-white font-medium mt-[20px]">
-          TheFinansol is an AI Enabler that loves developing Chatbots, <br /> AI
-          Models and Transformation Journeys
-        </p>
-      </div>
-      <img className="w-[500px] basis-[30%]" src={img} alt="" />
+    <div className="relative w-full flex items-center">
+  <div ref={text} className="relative flex flex-col basis-[70%] z-10">
+    <div>
+      <p className="font-Lexend text-[100px] text-white font-bold m-0 p-0 leading-none">
+        Build
+      </p>
+      <h1 className="font-Lexend text-[100px] text-white font-bold m-0 p-0 leading-none">
+        Yours next-gen
+      </h1>
     </div>
+
+    <div>
+      <span
+        ref={us}
+        className="font-Lexend font-semibold text-[#9086EF] text-[100px] m-0 p-0 leading-none"
+      ></span>
+    </div>
+    <p className="font-Lexend text-lg text-white font-medium mt-[20px]">
+      TheFinansol is an AI Enabler that loves developing Chatbots, <br /> AI
+      Models and Transformation Journeys
+    </p>
+  </div>
+  <img
+    className="absolute w-[825px] right-0 top-0"
+    src={img}
+    alt=""
+  />
+</div>
+
   );
 }
 
