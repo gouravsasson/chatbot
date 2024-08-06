@@ -81,7 +81,7 @@ const StickySections = () => {
         ref={sectionRef3}
       >
         <h1 className="text-4xl font-bold">Sticky Section 3</h1>
-        <p className="text-lg mt-4">Content for the third sticky section.</p>
+        
       </div>
     </div>
   );

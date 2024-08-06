@@ -1,11 +1,35 @@
 import React from "react";
+import { useRef,useEffect} from "react";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
 
 function OurServices() {
+    const containerRef = useRef(null);
+    useEffect(() => {
+        gsap.fromTo(
+          containerRef.current,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 3,
+            scrollTrigger: {
+              trigger: containerRef.current,
+              start: "top 75%",
+            },
+          }
+        );
+    
+       
+      }, []);
+
   return (
     <>
-      <div className=" h-screen  w-screen px-20">
+      <div className=" h-screen  w-screen px-20 ">
         <div className="mt-[100px] flex  justify-evenly">
-          <div>
+          <div className="" ref={containerRef}>
             <h1 className=" font-Lexend text-[50px] text-[#9086EF]">
               AI Chatbots
             </h1>
